@@ -1,0 +1,118 @@
+python-qrencode (1.2-5) unstable; urgency=medium
+
+  * Drop Python 2 support (Closes: #938112).
+  * Use debhelper-compat instead of debian/compat.
+  * debian/control:
+    - Bump Standards-Version to 4.4.0.
+    - Bump compat to 12.
+  * Bump copyright years.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Fri, 30 Aug 2019 08:31:57 -0400
+
+python-qrencode (1.2-4) unstable; urgency=medium
+
+  * Update Vcs-* fields (salsa migration).
+  * Update python3-qrencode short description's to mention Python 3.
+  * Update debian/watch to version 4 and use HTTPS protocol.
+  * Remove trailing whitespaces in debian/copyright and debian/changelog.
+  * Use HTTPS protocol in debian/copyright.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Sun, 25 Mar 2018 10:55:57 +0200
+
+python-qrencode (1.2-3) unstable; urgency=medium
+
+  * Bump compat from 10 to 11.
+  * debian/control:
+    - Fix use of Python 2.x substvars for Python 3 package (acknowledgments
+      to Chris Lamb!) (Closes: #887811).
+    - Bump Standards-Version to 4.1.3.0.
+    - Depend on debhelper >= 11 instead of >= 10.
+    - Set priority to optional (extra deprecated since 4.0.1).
+  * debian/copyright:
+    - Update copyright years.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Sun, 18 Feb 2018 09:19:34 +0100
+
+python-qrencode (1.2-2) unstable; urgency=medium
+
+  * Build for Python 2 and Python 3.
+  * Bump compat from 9 to 10.
+  * Build with hardening flags.
+  * debian/control:
+    - Bump Standards-Version to 4.1.1.
+    - Depend on debhelper >= 10 instead of >= 9.
+    - Build-Depend on python{3,}-pil instead of depending on
+      python-imaging (Closes: #866467).
+  * debian/copyright:
+    - Update copyright years.
+    - Update my e-mail address.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Sun, 08 Oct 2017 15:14:01 +0200
+
+python-qrencode (1.2-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #813602).
+  * debian/control:
+    - Update Hugo Lefeuvre's e-mail address.
+    - Bump Standards-Version to 3.9.8.
+  * Remove debian/patches/01-fix-segfault-on-long-strings.diff:
+    Integrated by upstream.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Fri, 19 Aug 2016 17:45:24 +0200
+
+python-qrencode (1.01-5) unstable; urgency=low
+
+  * debian/control:
+    - Bump standards-version to 3.9.6 (no changes needed)
+    - Add Build-Dependency on python-setuptools.
+    - Remove the version specification for python-all-dev (not
+      relevant anymore).
+  * debian/patches/01-fix-segfault-on-long-strings.diff:
+    - Make the patch DEP3 compliant.
+  * debian/watch:
+    - Update URL to use pypi.debian.net redirector.
+  * debian/rules:
+    - Use pybuild.
+  * debian/copyright:
+    - Update copyright years.
+    - Fix lintian warning dep5-copyright-license-name-not-unique
+      by creating a stand-alone license paragraph.
+
+ -- Hugo Lefeuvre <hugo6390@orange.fr>  Sat, 27 Jun 2015 19:26:03 +0200
+
+python-qrencode (1.01-4) unstable; urgency=low
+
+  * Adopted the package. (Closes: #731585)
+  * debian/control:
+    - Changed the Maintainer field to signal the adoption.
+  * debian/copyright:
+    - Reformatted the file to match with the new copyright format.
+    - Added a line for the new maintainer.
+
+ -- Hugo Lefeuvre <hugo6390@orange.fr>  Mon, 16 Jun 2014 23:45:34 +0200
+
+python-qrencode (1.01-3) unstable; urgency=low
+
+  * Avoid segfault on long strings.  If creation fails, None is returned
+    instead and an exception is raised.  Thanks, gluedig and Arachnid!
+    (Closes: #598031)
+  * convert from python-support to dh_python2
+  * bump standards-version 3.9.5 (no changes needed)
+  * bump to debhelper 9
+  * moved Vcs to collab-maint
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Sat, 21 Dec 2013 14:43:58 -0500
+
+python-qrencode (1.01-2) unstable; urgency=low
+
+  * added explicit dependency on python-imaging (Closes: #598029)
+  * bumped Standards-Version to 3.9.1 (no changes needed)
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Sun, 26 Sep 2010 17:04:44 -0400
+
+python-qrencode (1.01-1) unstable; urgency=low
+
+  * initial release into debian (Closes: #589877)
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 21 Jul 2010 16:09:53 -0400
+
